@@ -101,42 +101,40 @@ const MealDetail = ({ params }) => {
 
         <h1 className="text-2xl font-bold mb-4">{meal.strMeal}</h1>
 
-        <div className="bg-red-500 p-10">
-          <div className="flex flex-wrap md:flex-nowrap justify-between space-y-4 md:space-y-0 md:space-x-4">
-            <img src={meal.strMealThumb} alt={meal.strMeal} className="w-full md:w-1/2 h-[300px] md:h-[500px] object-cover rounded-md mb-4" />
-            <div className="w-full md:w-1/2">
-              <h1 className="font-semibold text-2xl mb-4">Instructions</h1>
-              <p>{meal.strInstructions}</p>
-              <h1 className="font-semibold text-2xl my-4">Recipes</h1>
-              <div className="flex flex-wrap md:flex-nowrap space-y-4 md:space-y-0 md:space-x-8">
-                {groupedIngredients.map((group, index) => (
-                  <ul key={index} className="list-disc list-inside w-full md:w-1/3 mb-4">
-                    {group.map((ingredient, idx) => (
-                      <li key={idx}>{ingredient}</li>
-                    ))}
-                  </ul>
-                ))}
-              </div>
+        <div className="flex flex-wrap md:flex-nowrap justify-between space-y-4 md:space-y-0 md:space-x-4">
+          <img src={meal.strMealThumb} alt={meal.strMeal} className="w-full md:w-1/2 h-[300px] md:h-[500px] object-cover rounded-md mb-4" />
+          <div className="w-full md:w-1/2">
+            <h1 className="font-semibold text-2xl mb-4">Instructions</h1>
+            <p>{meal.strInstructions}</p>
+            <h1 className="font-semibold text-2xl my-4">Recipes</h1>
+            <div className="flex flex-wrap md:flex-nowrap space-y-4 md:space-y-0 md:space-x-8">
+              {groupedIngredients.map((group, index) => (
+                <ul key={index} className="list-disc list-inside w-full md:w-1/3 mb-4">
+                  {group.map((ingredient, idx) => (
+                    <li key={idx}>{ingredient}</li>
+                  ))}
+                </ul>
+              ))}
             </div>
           </div>
-
-          {meal.strYoutube && (
-            <div className="mt-10">
-              <h2 className="text-[34px] font-bold">Tutorials</h2>
-              <div className="aspect-w-16 aspect-h-9 flex justify-center">
-                <iframe
-                  width="80%"
-                  className="rounded-xl h-[200px] md:h-[300px] lg:h-[350px]"
-                  src={`https://www.youtube.com/embed/${meal.strYoutube.split("v=")[1]}`}
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-          )}
         </div>
+
+        {meal.strYoutube && (
+          <div className="mt-10">
+            <h2 className="text-[34px] font-bold">Tutorials</h2>
+            <div className="aspect-w-16 aspect-h-9 flex justify-center">
+              <iframe
+                width="80%"
+                className="rounded-xl h-[200px] md:h-[300px] lg:h-[350px]"
+                src={`https://www.youtube.com/embed/${meal.strYoutube.split("v=")[1]}`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        )}
       </div>
     </>
   )
