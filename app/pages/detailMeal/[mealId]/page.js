@@ -121,7 +121,7 @@ const MealDetail = ({ params }) => {
 
         {meal.strYoutube && (
           <div className="mt-10">
-            <h2 className="text-[34px] font-bold">Tutorials</h2>
+            <h2 className="text-[34px] font-bold items-center mb-10 flex justify-center">Tutorials</h2>
             <div className="aspect-w-16 aspect-h-9 flex justify-center">
               <iframe
                 width="80%"
