@@ -9,11 +9,11 @@ export const Navbar = () => {
 
   return (
     <div className="w-full">
-      <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-1">
+      <nav className="relative flex flex-wrap items-center justify-between p-2 w-[95%] mx-auto lg:justify-between xl:px-1">
         <Link href="/">
           <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-900">
             <span>
-              <Image src="/img/logo.svg" width="32" alt="..." height="32" className="w-8" />
+              <Image src="/img/logo.jpeg" width="32" alt="..." height="32" className="w-8" />
             </span>
             <span>Meall Ap</span>
           </span>
